@@ -93,6 +93,7 @@ export class Start extends Component {
 
         currentLoadingIndex = 0;
         fnLoadNextRes();
+        this.dumpNode(director.getScene().children);
     }
 
     onLoadComplete() {
@@ -104,5 +105,24 @@ export class Start extends Component {
     update(deltaTime: number) {
         director.getScene().globals.skybox.rotationAngle -= deltaTime * 5;
         this.progress.setScale(currentLoadingIndex / preloadRes.length, 1, 1);
+    }
+
+    dumpNode(children:Node[]){
+        for(let i = 0; i < children.length; ++i){
+            let c = children[i];
+            console.log('Node:',c.name);
+            let components = c.components;
+            for(let j = 0; j < components.length; ++j){
+                let comp = components[j];
+                console.log('-',comp.name);
+                for(let t in comp){
+                    let p = comp[t];
+                    if(typeof(p) != 'function'){
+                        console.log('   ',t,typeof(p),p);
+                    }
+                }
+            }
+            this.dumpNode(c.children);
+        }
     }
 }

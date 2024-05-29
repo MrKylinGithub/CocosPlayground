@@ -73,5 +73,20 @@
     "codeLink": "https://aliyuncdn.antdv.com/common/docsearch.min_2.6.3.js",
     "qrLink": "https://example.com/demo1",
     "detail": "吧啦吧啦吧啦"
+  },
+  {
+    "officialType": "OFFICIAL",
+    "gameMode": "THREE_D",
+    "id": "6",
+    "label_zh": "投影天空盒",
+    "label_en": "ProjectiveSkybox",
+    "type": "Rendering",
+    "typeLabel_zh": "渲染",
+    "typeLabel_en": "camera",
+    "title": "投影天空盒",
+    "demoLink": "http://192.168.0.104:7456/web-mobile/web-mobile/index.html?s=projective-skybox&b=examples_projective_skybox",
+    "codeLink": "https://aliyuncdn.antdv.com/common/docsearch.min_2.6.3.js",
+    "qrLink": "",
+    "detail": "投影天空盒可以让你无需建模，就让整个环境与展示的物体相融。"
   }
 ]
